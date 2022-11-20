@@ -59,15 +59,15 @@ equivalences = {
 
     "p<->q": [
         "(p->q) ∧ (q->p)",
-        "(~p v q) ∧ (~p v q)"
+        "(~p v q) ∧ (~q v p)"
     ],
 
     "(p->q)^(q->p)": [
         "p <-> q",
-        "(~p v q) ∧ (~p v q)"
+        "(~p v q) ∧ (~q v p)"
     ],
 
-    "(~pvq)^(~pvq)": [
+    "(~pvq)^(~qvp)": [
         "p <-> q",
         "(p->q) ∧ (q->p)"
     ]
