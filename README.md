@@ -1,4 +1,4 @@
-# Equivalencia-logica-app
+# Equivalencia-Logica-APP
 
 ## Criação do Ambiente
 
