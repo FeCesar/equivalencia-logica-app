@@ -11,12 +11,11 @@
     <title>Results</title>
 </head>
 <body>
-    
 
     <header class="container-fluid bg-light">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="{{ url_for('index') }}">Equivalências Lógicas</a>
+              <a class="navbar-brand" href="{{ url_for('index') }}">Lógica</a>
 
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -29,8 +28,10 @@
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link btn-link" href="{{ url_for('referencias') }}">Referências</a>
+                    <a class="nav-link btn-link" aria-current="page" href="{{ url_for('tabela') }}">Tabela Verdade - BETA</a>
                   </li>
+
+
                 </ul>
               </div>
 

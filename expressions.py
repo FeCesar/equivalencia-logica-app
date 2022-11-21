@@ -1,5 +1,5 @@
 def get_logical_equivalences_by(expression):
-    results = equivalences.get(expression.replace(" ", "").replace("∧", "^"))
+    results = equivalences.get(expression.replace(" ", "").replace("∧", "^").lower())
 
     if(results is None):
         results = ["Sem equivalências lógicas por aqui"]

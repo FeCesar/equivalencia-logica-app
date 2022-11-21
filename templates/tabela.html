@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Index</title>
+    <title>Table Verdade</title>
 </head>
 <body>
     
@@ -39,17 +39,52 @@
           </nav>
     </header>
 
-    <main class="container">
-        <h3>Formulário</h3>
+    <br>
+    <article class="container">
+      <h5>Operações</h5>
+      <ul>
+        <li>Negação: 'not', '-', '~'</li>
+        <li>Ou: 'or'</li>
+        <li>E: 'and'</li>
+        <li>Condicional: '=>'</li>
+        <li>Bi Condicional: '='</li>
+      </ul>
+    </article>
 
-        <form method="post">
-            <div class="mb-3">
-              <label for="expression" class="form-label">Expressão</label>
-              <input type="text" class="form-control" name="expression" id="expression">
+    <main class="container">
+        <h3>Tabela Verdade</h3>
+
+        <form method="post" class="row gy-2 gx-3 align-items-center">
+
+          <h5>Preposições</h5>
+
+          <div class="container">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="p" name="p" id="flexCheckDefault" checked>
+              <label class="form-check-label" for="flexCheckDefault">P</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="q" name="q" id="flexCheckChecked">
+              <label class="form-check-label" for="flexCheckChecked">Q</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="r" name="r" id="flexCheckChecked">
+              <label class="form-check-label" for="flexCheckChecked">R</label>
             </div>
 
-            <button type="submit" class="btn btn-primary">Ver Equivalências</button>
-        </form>
+            <br>
+            <h5>Expressão</h5>
+
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Expressão</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="p and q" name="expression">
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-primary">Gerar Tabela Verdade</button>
+      </form>
+
     </main>
 
 
