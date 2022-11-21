@@ -21,6 +21,7 @@ def all():
 @app.route('/tabela-verdade', methods=["GET", "POST"])
 def tabela():
     if(request.method == "POST"):
-        return render_template("tabela-resultados.html", resultado=generate_truth_table(request.form))
+        generate_truth_table(request.form)
+        return render_template("tabela-resultados.html")
 
     return render_template("tabela.html")

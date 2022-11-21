@@ -10,7 +10,10 @@ section{
     text-align: center;
 }
 
-.textarea{
-    height: 400px;
-    width: 100%;
+.result{
+    margin-bottom: 10%;
+}
+
+.result h3{
+    margin-bottom: 3%;
 }

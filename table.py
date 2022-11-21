@@ -1,7 +1,9 @@
 import ttg
+import dataframe_image as dfi
 
 def generate_truth_table_without_expression(prepositions):
-    return str(ttg.Truths(bases=prepositions, ints=False)).strip()
+    df = ttg.Truths(bases=prepositions, ints=False).as_pandas()
+    dfi.export(df, "./static/images/figure.png")
 
 def generate_truth_table_with_expressions(prepositions, expressionsSTR):
     expressions = []
@@ -9,11 +11,9 @@ def generate_truth_table_with_expressions(prepositions, expressionsSTR):
     for expression in expressionsSTR.split(','):
         expressions.append(expression.lstrip())
 
-    print(expressions)
+    df = ttg.Truths(bases=prepositions, phrases=expressions, ints=False).as_pandas()
+    dfi.export(df, "./static/images/figure.png")
 
-    return str(ttg.Truths(bases=prepositions, phrases=expressions, ints=False)).strip()
-
-    
 
 def generate_truth_table(form):
     prepositions = []
@@ -24,8 +24,9 @@ def generate_truth_table(form):
     prepositions.remove('expression')
 
     if form['expression'] == '':
-        return generate_truth_table_without_expression(prepositions)
-
-    return generate_truth_table_with_expressions(prepositions, form['expression'])
+        generate_truth_table_without_expression(prepositions)
+    
+    else:
+        generate_truth_table_with_expressions(prepositions, form['expression'])
 
     
