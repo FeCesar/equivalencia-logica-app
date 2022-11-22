@@ -23,3 +23,14 @@
 02. Consulte o site em:
 
         localhost:5000/
+
+## Utilizando Docker
+
+01. No diretório de origem abra o terminal e builde a aplicação:
+
+        
+        docker build -t grupozada/logical-app .
+
+02. Após o build da imagem continue no terminal e digite:
+
+        docker container run --name logical-app -p 5000:5000 grupozada/logical-app
